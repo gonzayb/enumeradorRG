@@ -32,7 +32,7 @@ def formula_enumeracion(E,Vn):
 #Calcula como serán los rangos en base al tamaño del alfabeto
 def crear_rangos(E):        
     Rg = 0#Sera el numero del limite superior del rango dependiendo de la formula (E*(1+x)+1)**x
-    for i in range(1, 5):#Mejorar rango de creacion, comparar el Numero de RG con la formula
+    for i in range(1, 5):#Mejorar rango de creacion, comparar el Numero de RG con la formula, EVITAR OVERFLOW CON RANGO MAXIMO
         Vn = (formula_enumeracion(E,i))**i #Formula para hallar el rango
         Rg = Vn + Rg #Acumulador para sumar rango a rango y crear el limite superior
         rangos.append(int(Rg))#Se agrega el limite superior al rango
